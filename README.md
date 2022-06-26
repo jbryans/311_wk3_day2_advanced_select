@@ -53,6 +53,7 @@ SELECT phone1,SUBSTR(phone1,1,3) as areacode, COUNT(SUBSTR(phone1,1,3)) as total
   * first_name:Andra
   * county:New York
   * county total:14
+  SELECT MIN(users.first_name) as userName, usersAddress.county as userCounty, COUNT(usersAddress.id) as countyUsers FROM users JOIN usersAddress WHERE users.id = usersAddress.user_id GROUP BY userCounty HAVING countyUsers > 10 
 
 
 ## Summary
